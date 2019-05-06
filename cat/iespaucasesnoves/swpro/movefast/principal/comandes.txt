@@ -1,0 +1,9 @@
+1. git pull origin master
+2. Modificar codi
+3. git add .
+4. git commit -m "Nom del commit"
+5. git push origin master
+
+Marta Vehicles
+Miquel Lloguer
+Esteve Client
