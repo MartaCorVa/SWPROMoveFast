@@ -11,9 +11,10 @@ import java.util.Objects;
 
 /**
  *
- * @author Miquel
- */
-public class Empresa {
+ * @author Miquel */
+
+public class Empresa{
+
     private String nom;
     private String id;
     private String adreça;
@@ -46,12 +47,10 @@ public class Empresa {
         this.adreça = adreça;
     }
 
-    @Override
     public String toString() {
         return "Empresa{" + "nom=" + nom + ", id=" + id + ", adre\u00e7a=" + adreça + ", leasings=" + leasings + '}';
     }
 
-    @Override
     public int hashCode() {
         int hash = 7;
         hash = 79 * hash + Objects.hashCode(this.nom);
@@ -60,7 +59,6 @@ public class Empresa {
         return hash;
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -84,11 +82,11 @@ public class Empresa {
     public ArrayList<Leasing> getLeasings() {
         return leasings;
     }
-    
-    public void afegirLeasing(Leasing leasing){
+
+    public void afegirLeasing(Leasing leasing) {
         if (client.getTipus() == TipusClient.LEASING) {
-            
+
         }
     }
-    
+
 }

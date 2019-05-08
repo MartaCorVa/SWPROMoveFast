@@ -5,8 +5,8 @@
  */
 package cat.iespaucasesnoves.swpro.movefast.lloguer;
 
-import cat.iespaucasesnoves.swpro.movefast.client.Client;
-import cat.iespaucasesnoves.swpro.movefast.vehicle.Vehicle;
+import cat.iespaucasesnoves.swpro.movefast.client.*;
+import cat.iespaucasesnoves.swpro.movefast.vehicle.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 
@@ -63,16 +63,16 @@ public class Lloguer {
     }
 
     public double calculaPreu() {
-        double preu = vehicle.getPreu();
-        if (client.getTipus() == TipusClient.LEASING) {
-            preu = preu * (10/100);
+        double preu = ;
+        if (Client.getTipus() == TipusClient.LEASING) {
+            preu = preu * (10 / 100);
         }
         return preu;
 
     }
 
     public int compareTo(Lloguer lloguer) {
-        
+
         return 0;
 
     }

@@ -10,10 +10,10 @@ package cat.iespaucasesnoves.swpro.movefast.vehicle;
  */
 public class Vehicle {
 
-    private String matricula;
-    private TipusVehicle tipus;
+    protected String matricula;
+    protected TipusVehicle tipus;
     protected TipusCarnet carnet;
-    private double preu;
+    protected double preu;
 
     public Vehicle() {
     }  
