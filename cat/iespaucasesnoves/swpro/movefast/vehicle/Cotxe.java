@@ -3,6 +3,8 @@
  */
 package cat.iespaucasesnoves.swpro.movefast.vehicle;
 
+import cat.iespaucasesnoves.swpro.movefast.excepcions.VehicleException;
+
 /**
  *
  * @author Marta Córcoles Valle
@@ -10,36 +12,44 @@ package cat.iespaucasesnoves.swpro.movefast.vehicle;
 public class Cotxe extends Vehicle {
 
     private int numPortes;
-    private int numPassagers;
-    
-    public Cotxe(int numPortes, int numPassagers, double preu, String matricula, TipusVehicle tipus, TipusCarnet carnet) {
-        super(matricula, tipus, carnet, preu);
-        this.numPortes = numPortes;
-        this.numPassagers = numPassagers;
+    private int numPassatgers;
+
+    public Cotxe(String matricula, TipusVehicle tipusVehicle, TipusCanvi tipusCanvi, int numPassatgers) throws VehicleException {
+        super(matricula, tipusVehicle, tipusCanvi);
+        this.setNumPortes(numPassatgers);
+        this.setNumPassatgers(numPassatgers);
     }
 
-    public Cotxe(int numPassagers) {
-        this.numPassagers = numPassagers;
-        setNumPortes();
+    public void setNumPassatgers(int numPassatgers) {
+        try {
+            if (numPassatgers >= 1 && numPassatgers <= 7) {
+                this.numPassatgers = numPassatgers;
+            } else {
+                throw new VehicleException(002);
+            }
+        } catch (VehicleException e) {
+            System.out.println(e.getMessage());
+        }
     }
        
-    public int setNumPortes() {
-        switch (numPassagers) {
+    public void setNumPortes(int numPassatgers) {
+        switch (numPassatgers) {
             case 1:
             case 2:
-                numPortes = 3;
+                this.numPortes = 3;
+                break;
             case 3:
             case 4:
             case 5:
             case 6:
             case 7:
-                numPortes = 5;
+                this.numPortes = 5;
+                break;
         }        
-        return numPortes;
     }
     
     @Override
     public String toString() {
-        return "Cotxe{" + "numPortes=" + numPortes + ", carnet=" + carnet + '}';
+        return "Cotxe{" + "numPortes=" + numPortes + ", carnet=" + carnet + ", numPassatgers=" + numPassatgers + '}';
     }
 }
