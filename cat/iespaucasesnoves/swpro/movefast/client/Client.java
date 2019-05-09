@@ -15,7 +15,7 @@ public abstract class Client {
     protected String idDni;
     protected String nom;
     protected ArrayList<TipusCarnet> carnets;
-    protected TipusClient tipus;
+    public TipusClient tipus;
 
     public Client(String idDni, String nom, ArrayList<TipusCarnet> carnets, TipusClient tipus) {
         this.idDni = idDni;
