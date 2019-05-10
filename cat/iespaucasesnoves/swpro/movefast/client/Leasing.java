@@ -18,8 +18,8 @@ public final class Leasing extends Client {
     private String nif;
     private String nomEmpresa;
 
-//    public Leasing(String compteBancari, String nif, String nomEmpresa, String idDni, String nom, ArrayList<TipusCarnet> carnets) {
-//        super(idDni, nom, carnets, tipusClient=TipusClient.LEASING);
+//    public Leasing(String compteBancari, String nif, String nomEmpresa, String idDni, String nom, ArrayList<TipusCarnet> tipusCarnets) {
+//        super(idDni, nom, tipusCarnets, tipusClient=TipusClient.LEASING);
 //        this.compteBancari = compteBancari;
 //        this.nif = nif;
 //        this.nomEmpresa = nomEmpresa;
@@ -48,7 +48,7 @@ public final class Leasing extends Client {
 
     @Override
     public String toString() {
-        return "Leasing{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipusClient + ", compteBancari=" + compteBancari + ", nif=" + nif + ", nomEmpresa=" + nomEmpresa + '}';
+        return "Leasing{"+ "idDni=" + idDni + ", nom=" + nom + ", tipusClient=" + tipusClient + ", compteBancari=" + compteBancari + ", nif=" + nif + ", nomEmpresa=" + nomEmpresa + '}';
     }
 
    

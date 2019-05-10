@@ -14,18 +14,18 @@ public abstract class Client {
 
     protected String idDni;
     protected String nom;
-    protected ArrayList<TipusCarnet> carnets;
-    public TipusClient tipus;
+    protected ArrayList<TipusCarnet> tipusCarnets;
+    public TipusClient tipusClient;
 
-    public Client(String idDni, String nom, ArrayList<TipusCarnet> carnets, TipusClient tipus) {
+    public Client(String idDni, String nom, TipusClient tipusClient) {
         this.idDni = idDni;
         this.nom = nom;
-        this.carnets = carnets;
-        this.tipus = tipus;
+        this.tipusCarnets = new ArrayList<>();
+        this.tipusClient = tipusClient;
     }
 
-    public TipusClient getTipus() {
-        return tipus;
+    public TipusClient getTipusClient() {
+        return tipusClient;
     }
 
     public String getId() {
@@ -36,12 +36,12 @@ public abstract class Client {
         return nom;
     }
 
-    public ArrayList<TipusCarnet> getCarnets() {
-        return carnets;
+    public ArrayList<TipusCarnet> getTipusCarnets() {
+        return tipusCarnets;
     }
 
-    public void setCarnets(ArrayList<TipusCarnet> carnets) {
-        this.carnets = carnets;
+    public void setTipusCarnets(ArrayList<TipusCarnet> tipusCarnets) {
+        this.tipusCarnets = tipusCarnets;
     }
 
     public void setNom(String nom) {
@@ -50,7 +50,7 @@ public abstract class Client {
 
     @Override
     public String toString() {
-        return "Client{" + "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipus + '}';
+        return "Client{" + "idDni=" + idDni + ", nom=" + nom + ", carnets=" + tipusCarnets + ", tipusClient=" + tipusClient + '}';
     }
     
     

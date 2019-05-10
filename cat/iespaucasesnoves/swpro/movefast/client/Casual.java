@@ -42,7 +42,7 @@ public final class Casual extends Client {
 
     @Override
     public String toString() {
-        return "Casual{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipusClient + ", tipusPagament=" + tipusPagament + ", numTargeta=" + numTargeta + '}';
+        return "Casual{"+ "idDni=" + idDni + ", nom=" + nom + ", tipusClient=" + tipusClient + ", tipusPagament=" + tipusPagament + ", numTargeta=" + numTargeta + '}';
     }
 
     
