@@ -18,8 +18,15 @@ public final class Leasing extends Client {
     private String nif;
     private String nomEmpresa;
 
-    public Leasing(String compteBancari, String nif, String nomEmpresa, String idDni, String nom, ArrayList<TipusCarnet> carnets, TipusClient tipus) {
-        super(idDni, nom, carnets, tipus);
+//    public Leasing(String compteBancari, String nif, String nomEmpresa, String idDni, String nom, ArrayList<TipusCarnet> carnets) {
+//        super(idDni, nom, carnets, tipusClient=TipusClient.LEASING);
+//        this.compteBancari = compteBancari;
+//        this.nif = nif;
+//        this.nomEmpresa = nomEmpresa;
+//    }
+
+    public Leasing(String compteBancari, String nif, String nomEmpresa, String idDni, String nom) {
+        super(idDni, nom, TipusClient.LEASING);
         this.compteBancari = compteBancari;
         this.nif = nif;
         this.nomEmpresa = nomEmpresa;
@@ -29,25 +36,21 @@ public final class Leasing extends Client {
         return compteBancari;
     }
 
-    @Override
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getNif() {
+        return nif;
     }
 
-    @Override
-    public void setCarnets(ArrayList<TipusCarnet> carnets) {
-        this.carnets = carnets;
-    }
-
-    public void setTipus(TipusClient tipus) {
-        this.tipus = tipus;
-    }
-
-    @Override
-    public String toString() {
-        return "Leasing{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipus + "compteBancari=" + compteBancari + ", nif=" + nif + ", nomEmpresa=" + nomEmpresa + '}';
+    public String getNomEmpresa() {
+        return nomEmpresa;
     }
 
     
+
+    @Override
+    public String toString() {
+        return "Leasing{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipusClient + ", compteBancari=" + compteBancari + ", nif=" + nif + ", nomEmpresa=" + nomEmpresa + '}';
+    }
+
+   
     
 }

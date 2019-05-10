@@ -5,8 +5,8 @@
  */
 package cat.iespaucasesnoves.swpro.movefast.client;
 
-import cat.iespaucasesnoves.swpro.movefast.vehicle.TipusCarnet;
-import java.util.ArrayList;
+//import cat.iespaucasesnoves.swpro.movefast.vehicle.TipusCarnet;
+//import java.util.ArrayList;
 
 
 
@@ -19,58 +19,30 @@ public final class Casual extends Client {
     private TipusPagament tipusPagament;
     private String numTargeta;
 
-    public Casual(TipusPagament tipusPagament, String numTargeta, String idDni, String nom, ArrayList<TipusCarnet> carnets, TipusClient tipus) {
-        super(idDni, nom, carnets, tipus);
+    public Casual(TipusPagament tipusPagament, String numTargeta, String idDni, String nom) {
+        super(idDni, nom, TipusClient.CASUAL);
         this.tipusPagament = tipusPagament;
-        this.numTargeta = numTargeta;
+        
+        
         if(this.tipusPagament == TipusPagament.METALIC){
-            this.numTargeta = null;
+            this.numTargeta = "CAP-Pagat amb Metalic";
+        } else {
+             this.numTargeta = numTargeta;
         }
+       
     }
-
     
-
     public TipusPagament getTipusPagament() {
         return tipusPagament;
     }
 
-    @Override
-    public String getId() {
-        return idDni;
-    }
-
-    @Override
-    public String getNom() {
-        return nom;
-    }
-
-    @Override
-    public ArrayList<TipusCarnet> getCarnets() {
-        return carnets;
-    }
-
-    @Override
-    public TipusClient getTipus() {
-        return tipus;
-    }
-
-    @Override
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    @Override
-    public void setCarnets(ArrayList<TipusCarnet> carnets) {
-        this.carnets = carnets;
-    }
-
-    public void setTipus(TipusClient tipus) {
-        this.tipus = tipus;
-    }
+     public String getNumTargeta() {
+        return numTargeta;
+    }  
 
     @Override
     public String toString() {
-        return "Casual{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipus + ", tipusPagament=" + tipusPagament + ", numTargeta=" + numTargeta + '}';
+        return "Casual{"+ "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipusClient + ", tipusPagament=" + tipusPagament + ", numTargeta=" + numTargeta + '}';
     }
 
     

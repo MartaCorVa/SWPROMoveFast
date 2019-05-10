@@ -29,14 +29,20 @@ public class Esteve {
         System.out.println(carnets.size());
 
         //lo mes normal es fer el ArrayList que llisti els carnets que te aquella persona. - Així sebra quin tipus de vehicles podrà alquilar.
-        //a casual si el tipusPagament es Metalic aunque li posis algo al camp numTargeta, sempre serà null.
-        Casual prova1 = new Casual(TipusPagament.METALIC, "1819", "78218593L", "Esteve Seguí Casas", carnets, TipusClient.CASUAL);
-        Casual prova2 = new Casual(TipusPagament.TARGETA, "4485715860868875", "89647252J", "M.Antonia Olivares Cornella", carnets, TipusClient.CASUAL);
-        Leasing prova3 = new Leasing("ES6621000418401234567891", "85558233G", "PALMAPICTURES", "14256598P", "David Bowie C.", carnets, TipusClient.CASUAL);
+        //a casual si el tipusPagament es Metalic aunque li posis algo al camp numTargeta, sempre serà "Cap - Pagat amb metalic".
+//        Casual prova1 = new Casual(TipusPagament.METALIC, "1819", "78218593L", "Esteve Seguí Casas", carnets, TipusClient.CASUAL);
+        Casual prova1 = new Casual(TipusPagament.METALIC,"", "78218593L", "Esteve Seguí Casas");
+        Casual prova2 = new Casual(TipusPagament.TARGETA, "4485715860868875", "89647252J", "M.Antonia Olivares Cornella");
+        //arreglar que si es de un objecteLeasing no pugui posar TipusClient.casual.
+        Leasing prova3 = new Leasing("ES6621000418401234567891", "85558233G", "PALMAPICTURES", "14256598P", "David Bowie C.");
         
         System.out.println(prova1);
         System.out.println(prova2);
         System.out.println(prova3);
+        
+        
     }
 
+    
+    
 }

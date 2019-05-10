@@ -64,7 +64,7 @@ public class Lloguer {
 
     public double calculaPreu() {
         double preu = ;
-        if (Client.getTipus() == TipusClient.LEASING) {
+        if (Client.getTipusClient() == TipusClient.LEASING) {
             preu = preu * (10 / 100);
         }
         return preu;
