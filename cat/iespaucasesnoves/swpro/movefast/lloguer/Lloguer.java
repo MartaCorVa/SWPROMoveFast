@@ -61,18 +61,19 @@ public class Lloguer {
     public void setFi(LocalDate fi) {
         this.fi = fi;
     }
-
-    public double calculaPreu() {
-        double preu = ;
-        if (Client.getTipus() == TipusClient.LEASING) {
-            preu = preu * (10 / 100);
-        }
-        return preu;
-
-    }
+    
+    // S'ha de fer es metode
+//    public double calculaPreu() {
+//        double preu = ;
+//        if ( == ) {
+//            preu = preu * (10 / 100);
+//        }
+//        return preu;
+//
+//    }
 
     public int compareTo(Lloguer lloguer) {
-
+        
         return 0;
 
     }

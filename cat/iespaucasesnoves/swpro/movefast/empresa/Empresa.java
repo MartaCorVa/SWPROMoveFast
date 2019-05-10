@@ -5,10 +5,7 @@
  */
 package cat.iespaucasesnoves.swpro.movefast.empresa;
 
-import cat.iespaucasesnoves.swpro.movefast.client.Client;
 import cat.iespaucasesnoves.swpro.movefast.client.Leasing;
-import cat.iespaucasesnoves.swpro.movefast.client.TipusClient;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -17,7 +14,7 @@ import java.util.Objects;
  * @author Miquel
  */
 public class Empresa {
-    
+
     private String nom;
     private String id;
     private String adreça;
@@ -87,9 +84,12 @@ public class Empresa {
     }
 
     public void afegirLeasing(Leasing leasing) {
-        if (this.tipus == TipusClient.LEASING) {
-
+        for (Leasing i : getLeasings().values()) {
+            if (i.getId() != leasing.getId())  {
+                leasings.put(leasing.getId(), leasing);
+            }
         }
+
     }
-   
+
 }
