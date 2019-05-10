@@ -15,17 +15,17 @@ public abstract class Client {
     protected String idDni;
     protected String nom;
     protected ArrayList<TipusCarnet> carnets;
-    protected TipusClient tipusClient;
+    public TipusClient tipus;
 
-    public Client(String idDni, String nom, TipusClient tipusClient) {
+    public Client(String idDni, String nom, ArrayList<TipusCarnet> carnets, TipusClient tipus) {
         this.idDni = idDni;
         this.nom = nom;
-        this.carnets = new ArrayList<>();
-        this.tipusClient = tipusClient;
+        this.carnets = carnets;
+        this.tipus = tipus;
     }
 
-    public TipusClient getTipusClient() {
-        return tipusClient;
+    public TipusClient getTipus() {
+        return tipus;
     }
 
     public String getId() {
@@ -48,13 +48,9 @@ public abstract class Client {
         this.nom = nom;
     }
 
-    
-    
-    
-
     @Override
     public String toString() {
-        return "Client{" + "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipusClient=" + tipusClient + '}';
+        return "Client{" + "idDni=" + idDni + ", nom=" + nom + ", carnets=" + carnets + ", tipus=" + tipus + '}';
     }
     
     

@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cat.iespaucasesnoves.swpro.movefast.Empresa;
+package cat.iespaucasesnoves.swpro.movefast.empresa;
 
+import cat.iespaucasesnoves.swpro.movefast.client.Client;
+import cat.iespaucasesnoves.swpro.movefast.client.Leasing;
+import cat.iespaucasesnoves.swpro.movefast.client.TipusClient;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
 /**
  *
- * @author Miquel */
-
-public class Empresa{
-
+ * @author Miquel
+ */
+public class Empresa {
+    
     private String nom;
     private String id;
     private String adreça;
@@ -79,14 +82,14 @@ public class Empresa{
         return Objects.equals(this.adreça, other.adreça);
     }
 
-    public ArrayList<Leasing> getLeasings() {
+    public HashMap<String, Leasing> getLeasings() {
         return leasings;
     }
 
     public void afegirLeasing(Leasing leasing) {
-        if (client.getTipus() == TipusClient.LEASING) {
+        if (this.tipus == TipusClient.LEASING) {
 
         }
     }
-
+   
 }
