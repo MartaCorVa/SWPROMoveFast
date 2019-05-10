@@ -25,7 +25,7 @@ public final class Casual extends Client {
         
         
         if(this.tipusPagament == TipusPagament.METALIC){
-            this.numTargeta = "CAP-Pagat amb Metalic";
+            this.numTargeta = null;
         } else {
              this.numTargeta = numTargeta;
         }
